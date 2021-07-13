@@ -36,7 +36,12 @@ Do the following:
    HINT: no function required
 */
 
-
+let age = 2001;
+let currentYear = 2021;
+if(currentYear>age){
+  age = currentYear-age;
+  console.log(age);
+}
 
 
 
@@ -50,6 +55,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+let yearStr ='1999';
+yearStr =Number(yearStr);
+console.log(yearStr);
 
 
 
@@ -63,8 +71,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a*b;
 }
 
 
@@ -79,8 +87,9 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(a){
+  a = a * 7;
+  return a;
 }
 
 
@@ -112,7 +121,33 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(a,b){
+  if(b>=1){
+    if(a <=5){
+      return a*.05;
+    }
+    else if(a>=6 && a<=10){
+      return a*.04;
+    }
+    else if(a >= 11 && a <= 15){
+      return a*.03;
+    }
+    else if(a >15){
+      return a*.02;
+    }
+  }
+  else{
+    if(b >= 0.16 && b<=0.33){
+        return a*.10;
+    }
+    if(b >= 0.16 && b<=0.58){
+      return a*.05;
+  }
+  if(b >= 0.58 && b<=0.99){
+    return a*.04;
+}
+
+  }
   /*add your code here*/
 }
 
@@ -181,7 +216,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kiloM){
+  kiloM = kiloM *  0.621371;
+  return kiloM;
   /*add your code here*/
 }
 
@@ -195,7 +232,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(cm){
+  return cm/30.48;
   /*add your code here*/
 }
 
@@ -213,9 +251,9 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(num){
       /*add your code here*/
-      for( i = num; i>0; i--){
-
-        return i + 'bottles of soda on the wall, ' + i +' bottles of soda, take one down pass it around' + i-1 + ' bottles of soda on the wall';
+      for( let i = num; i>0; i--){
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i -1} bottles of soda on the wall`;
+//        return i + 'bottles of soda on the wall, ' + i +' bottles of soda, take one down pass it around' + i-1 + ' bottles of soda on the wall';
       }
 }
 
@@ -235,8 +273,24 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
+function grade(points){
 /*Your Code here */
+  if(points >= 90){
+    return 'you got an A';
+  }
+  else if(points >= 80){
+    return 'you got a B';
+  }
+  else if(points >= 70){
+    return 'you got a C';
+  }
+  else if(points >= 60){
+    return 'you got a D';
+  }
+  else{
+    return 'you got an F';
+  }
+
 }
 
 
